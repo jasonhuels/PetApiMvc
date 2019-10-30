@@ -1,15 +1,29 @@
-﻿<h1>All Articles:</h1>
+﻿<h1>All Pets:</h1>
 
 <ol>
-@foreach (Article article in Model)
+@foreach (Pet pet in Model)
 {
-    <ul>
-        <li>Section: @article.Section</li>
-        <li>Title: @article.Title</li>
-        <li>Abstract: @article.Abstract</li>
-        <li>Url: @article.Url</li>
-        <li>Byline: @article.Byline</li>
-    </ul>
-    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <img src='http://localhost:5000/api/Pets/@pet.PetId/photo' width="350">
+        </div>
+        <div class="col-md-8">
+            <ul>
+                <li>Name: @pet.Name</li>
+                <li>Species: @pet.Species</li>
+                <li>Breed: @pet.Breed</li>
+                <li>Age: @pet.Age</li>
+                <li>Gender: @pet.Gender</li>
+                <li>Description: @pet.Description</li>
+                <li>Favorite Things: @pet.FavoriteThings</li>
+                <li>Least Favorite Things: @pet.LeastFavoriteThings</li>
+                <li>Owner: @pet.Owner</li>
+                
+                
+            </ul>
+            <br>
+        </div>
+
+    </div>
 }
 </ol>

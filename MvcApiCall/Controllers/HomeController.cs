@@ -7,8 +7,8 @@ namespace MvcApiCall.Controllers
     {
         public IActionResult Index()
         {
-            var allArticles = Article.GetArticles(EnvironmentVariables.ApiKey);
-            return View(allArticles);
+            var allPets = Pet.GetPets();
+            return View(allPets);
         }
     }
 }
