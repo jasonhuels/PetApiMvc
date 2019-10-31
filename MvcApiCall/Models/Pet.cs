@@ -25,7 +25,6 @@ namespace MvcApiCall.Models
             var result = apiCallTask.Result;
 
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
-            Console.WriteLine(jsonResponse);
             List<Pet> petList = JsonConvert.DeserializeObject<List<Pet>>(jsonResponse.ToString()); 
 
             return petList;

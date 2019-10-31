@@ -1,0 +1,31 @@
+﻿<h1>All Pets:</h1>
+
+<ol>
+@foreach (Pet pet in Model)
+{
+    <div class=" card pet-card">
+    <div class="row">
+        <div class="col-md-5">
+            <img src='http://localhost:5000/api/Pets/@pet.PetId/photo' width="350">
+        </div>
+        <div class="col-md-7 ">
+            <ul>
+                <li>Name: @pet.Name</li>
+                <li>Species: @pet.Species</li>
+                <li>Breed: @pet.Breed</li>
+                <li>Age: @pet.Age</li>
+                <li>Gender: @pet.Gender</li>
+                <li>Description: @pet.Description</li>
+                <li>Favorite Things: @pet.FavoriteThings</li>
+                <li>Least Favorite Things: @pet.LeastFavoriteThings</li>
+                <li>Owner: @pet.Owner</li>
+                
+                
+            </ul>
+            <br>
+        </div>
+
+    </div>
+    </div>
+}
+</ol>
